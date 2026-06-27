@@ -1,24 +1,29 @@
-CENTAUR ONE SINGLE-FILE GITHUB WEBSITE
+CENTAUR ONE GITHUB WEBSITE WITH FILLABLE QUOTE FORM
 
-This is the corrected version.
+This package includes:
+1. index.html
+2. Centaur_One_Customer_Request_for_Price_Quote_Form.pdf
 
-It uses ONE file only:
-- index.html
+IMPORTANT:
+Upload BOTH files to your GitHub repository root.
 
-All 12 brochure pages are embedded directly inside index.html.
-There is no assets folder and no image path problem.
+HOW CUSTOMERS USE IT:
+1. Customer opens your GitHub Pages website.
+2. Customer clicks "Open Fillable Quote Form" or "Download Quote Form."
+3. Customer fills out the PDF.
+4. Customer saves the completed PDF.
+5. Customer clicks "Email Completed Form" and attaches the saved PDF.
 
-HOW TO USE ON GITHUB:
+NOTE:
+A website cannot automatically attach a customer-filled PDF to an email because browsers block that for security.
+The customer must save the completed PDF and attach it manually.
 
-1. Unzip this file.
-2. Open your GitHub repository.
-3. Delete every old file in the repository.
-4. Upload ONLY:
-   index.html
-5. Click Commit changes.
-6. Wait 1-3 minutes.
-7. Refresh your GitHub Pages URL.
-
-If the old page still shows:
-Windows: Ctrl + F5
-Mac: Command + Shift + R
+GITHUB UPLOAD:
+1. Open your GitHub repository.
+2. Delete old files if needed.
+3. Upload:
+   - index.html
+   - Centaur_One_Customer_Request_for_Price_Quote_Form.pdf
+4. Click Commit changes.
+5. Wait 1-3 minutes.
+6. Refresh your GitHub Pages URL.
