@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://centaur-usa.github.io/Centaur-one/sitemap.xml
