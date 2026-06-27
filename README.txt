@@ -1,29 +1,20 @@
-CENTAUR ONE GITHUB WEBSITE WITH FILLABLE QUOTE FORM
+CENTAUR ONE GITHUB WEBSITE - UPDATED QUOTE FORM PLACEMENT
 
 This package includes:
 1. index.html
 2. Centaur_One_Customer_Request_for_Price_Quote_Form.pdf
 
-IMPORTANT:
-Upload BOTH files to your GitHub repository root.
+Changes made:
+- Moved "Request a Centaur One Price Quote" to the bottom of the brochure.
+- Made the quote section smaller.
+- Removed "Open Fillable Quote Form" from the top header.
+- Changed top phone button to only show: 217-418-9662
+- Changed top email button to only show: brad@centaur.ag
+- Kept Download Brochure in the top header.
+- Embedded all 12 brochure pages inside index.html.
 
-HOW CUSTOMERS USE IT:
-1. Customer opens your GitHub Pages website.
-2. Customer clicks "Open Fillable Quote Form" or "Download Quote Form."
-3. Customer fills out the PDF.
-4. Customer saves the completed PDF.
-5. Customer clicks "Email Completed Form" and attaches the saved PDF.
+Upload BOTH files to your GitHub repository root:
+- index.html
+- Centaur_One_Customer_Request_for_Price_Quote_Form.pdf
 
-NOTE:
-A website cannot automatically attach a customer-filled PDF to an email because browsers block that for security.
-The customer must save the completed PDF and attach it manually.
-
-GITHUB UPLOAD:
-1. Open your GitHub repository.
-2. Delete old files if needed.
-3. Upload:
-   - index.html
-   - Centaur_One_Customer_Request_for_Price_Quote_Form.pdf
-4. Click Commit changes.
-5. Wait 1-3 minutes.
-6. Refresh your GitHub Pages URL.
+Then commit changes and refresh your GitHub Pages URL after 1-3 minutes.
