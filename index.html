@@ -1,1 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Centaur One Brochure</title>
+  <meta name="description" content="Centaur One wireless AI grain monitoring system for farm grain bins up to 50,000 bushels.">
+  <style>
+    body {
+      margin: 0;
+      background: #f4f4f4;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #061f36;
+      color: white;
+      padding: 12px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 3px 14px rgba(0,0,0,.25);
+    }
+
+    .brand {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: #e87511;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .buttons a {
+      background: #e87511;
+      color: white;
+      text-decoration: none;
+      padding: 9px 14px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .buttons a.secondary {
+      background: #ffffff;
+      color: #061f36;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 12px 28px;
+    }
+
+    .brochure-page {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 28px;
+      background: white;
+      box-shadow: 0 8px 28px rgba(0,0,0,.18);
+    }
+
+    .quote-form-panel {
+      max-width: 1200px;
+      margin: 0 auto 36px;
+      background: white;
+      border-left: 6px solid #e87511;
+      padding: 22px 26px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.14);
+    }
+
+    .quote-form-panel h2 {
+      margin: 0 0 8px;
+      color: #061f36;
+      font-size: 24px;
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .quote-form-panel p {
+      margin: 8px 0;
+      color: #24384d;
+      font-size: 16px;
+    }
+
+    .quote-form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .quote-btn {
+      background: #e87511;
+      color: white;
+      text-decoration: none;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-weight: 800;
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    .quote-btn.email {
+      background: #1f7a3a;
+    }
+
+    .small-note {
+      font-size: 13px !important;
+      color: #5b6775 !important;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        position: static;
+        display: block;
+        text-align: center;
+      }
+
+      .buttons {
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .buttons a {
+        width: 100%;
+        text-align: center;
+      }
+
+      main {
+        padding: 0;
+      }
+
+      .brochure-page {
+        margin-bottom: 8px;
+        box-shadow: none;
+      }
+
+      .quote-form-panel {
+        margin: 0;
+        box-shadow: none;
+        border-left: 0;
+        border-top: 6px solid #e87511;
+      }
+
+      .quote-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .mobile-quote-form {
+      margin-top: 18px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .mobile-quote-form label {
+      display: grid;
+      gap: 6px;
+      color: #061f36;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+    .mobile-quote-form input {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 16px;
+      background: #fff;
+    }
+
+    .mobile-quote-form .full {
+      grid-column: 1 / -1;
+    }
+
+    .mobile-quote-form h3 {
+      color: #061f36;
+      margin: 24px 0 10px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    .site-table {
+      display: grid;
+      gap: 8px;
+    }
+
+    .site-row {
+      display: grid;
+      grid-template-columns: .5fr 2.4fr 1fr 1fr;
+      gap: 8px;
+      align-items: end;
+    }
+
+    .header-row {
+      background: #061f36;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px 8px;
+      align-items: center;
+    }
+
+    .site-num {
+      text-align: center;
+      font-weight: 900;
+      color: #061f36;
+      padding-bottom: 12px;
+    }
+
+    .carrier-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .carrier-row label {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 15px;
+    }
+
+    .carrier-row input {
+      width: auto;
+    }
+
+    .other-carrier {
+      display: grid;
+      gap: 6px;
+    }
+
+    .quote-submit {
+      margin-top: 20px;
+      width: 100%;
+      border: 0;
+      background: #e87511;
+      color: #fff;
+      border-radius: 10px;
+      padding: 15px 18px;
+      font-size: 17px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    @media (max-width: 700px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    .site-table {
+      display: grid;
+      gap: 8px;
+    }
+
+    .site-row {
+      display: grid;
+      grid-template-columns: .5fr 2.4fr 1fr 1fr;
+      gap: 8px;
+      align-items: end;
+    }
+
+    .header-row {
+      background: #061f36;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px 8px;
+      align-items: center;
+    }
+
+    .site-num {
+      text-align: center;
+      font-weight: 900;
+      color: #061f36;
+      padding-bottom: 12px;
+    }
+
+      .site-num::before {
+        content: "Site ";
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Centaur<span>One</span></div>
+    <div class="buttons">
+      <a href="tel:12174189662">217-418-9662</a>
+      <a href="mailto:brad@centaur.ag">Email</a>
+      <a class="secondary" href="Centaur_One_Brochure.pdf" download="Centaur_One.pdf">View Brochure</a>
+      <a href="#quote-form">Get My Custom Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <img class="brochure-page" src="images/page01.png" alt="Centaur One brochure page 1"><img class="brochure-page" src="images/page02.jpg" alt="Centaur One brochure page 2"><img class="brochure-page" src="images/page03.jpg" alt="Centaur One brochure page 3"><img class="brochure-page" src="images/page04.jpg" alt="Centaur One brochure page 4"><img class="brochure-page" src="images/page05.jpg" alt="Centaur One brochure page 5"><img class="brochure-page" src="images/page06.jpg" alt="Centaur One brochure page 6"><img class="brochure-page" src="images/page07.jpg" alt="Centaur One brochure page 7"><img class="brochure-page" src="images/page08.jpg" alt="Centaur One brochure page 8"><img class="brochure-page" src="images/page09.jpg" alt="Centaur One brochure page 9"><img class="brochure-page" src="images/page10.jpg" alt="Centaur One brochure page 10"><img class="brochure-page" src="images/page11.jpg" alt="Centaur One brochure page 11"><img class="brochure-page" src="images/page12.png" alt="Centaur One brochure page 12">
+  </main>
+
+  <section class="quote-form-panel" id="quote-form">
+    <h2>Get My Custom Quote</h2>
+    <p>Complete the form below and tap “Send Quote Request.” Your phone or email app will open with the completed information ready to send.</p>
+
+    <form class="mobile-quote-form" id="quoteForm">
+      <div class="form-grid">
+        <label>Customer Name<input type="text" name="Customer Name"></label>
+        <label>Farm / Company<input type="text" name="Farm / Company"></label>
+        <label>Phone<input type="tel" name="Phone"></label>
+        <label>Email<input type="email" name="Email"></label>
+        <label class="full">Address<input type="text" name="Address"></label>
+        <label>City<input type="text" name="City"></label>
+        <label>State<input type="text" name="State"></label>
+        <label>ZIP<input type="text" name="ZIP"></label>
+      </div>
+
+      <h3>Site Information</h3>
+      
+      <div class="site-table">
+        <div class="site-row header-row">
+          <div>Site</div>
+          <div>Location</div>
+          <div># of Bins</div>
+          <div># of Fans</div>
+        </div>
+
+        <div class="site-row">
+          <div class="site-num">1</div>
+          <label>Location<input name="Site 1 Location"></label>
+          <label># of Bins<input name="Site 1 Bins"></label>
+          <label># of Fans<input name="Site 1 Fans"></label>
+        </div>
+
+        <div class="site-row">
+          <div class="site-num">2</div>
+          <label>Location<input name="Site 2 Location"></label>
+          <label># of Bins<input name="Site 2 Bins"></label>
+          <label># of Fans<input name="Site 2 Fans"></label>
+        </div>
+
+        <div class="site-row">
+          <div class="site-num">3</div>
+          <label>Location<input name="Site 3 Location"></label>
+          <label># of Bins<input name="Site 3 Bins"></label>
+          <label># of Fans<input name="Site 3 Fans"></label>
+        </div>
+
+        <div class="site-row">
+          <div class="site-num">4</div>
+          <label>Location<input name="Site 4 Location"></label>
+          <label># of Bins<input name="Site 4 Bins"></label>
+          <label># of Fans<input name="Site 4 Fans"></label>
+        </div>
+
+        <div class="site-row">
+          <div class="site-num">5</div>
+          <label>Location<input name="Site 5 Location"></label>
+          <label># of Bins<input name="Site 5 Bins"></label>
+          <label># of Fans<input name="Site 5 Fans"></label>
+        </div>
+      </div>
+
+
+      <h3>Cell Service Carrier</h3>
+      <div class="carrier-row">
+        <label><input type="radio" name="Cell Service Carrier" value="Verizon"> Verizon</label>
+        <label><input type="radio" name="Cell Service Carrier" value="AT&T"> AT&T</label>
+        <label><input type="radio" name="Cell Service Carrier" value="T-Mobile"> T-Mobile</label>
+        <label><input type="radio" name="Cell Service Carrier" value="Other"> Other</label>
+      </div>
+
+      <label class="full other-carrier">Other Carrier<input type="text" name="Other Carrier"></label>
+
+      <button type="submit" class="quote-submit">Send Quote Request</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const data = new FormData(form);
+      let body = 'Centaur One Quote Request%0A%0A';
+
+      for (const [key, value] of data.entries()) {
+        if (value && value.trim() !== '') {
+          body += encodeURIComponent(key + ': ' + value) + '%0A';
+        }
+      }
+
+      const subject = encodeURIComponent('Centaur One Quote Request');
+      window.location.href = 'mailto:brad@centaur.ag?subject=' + subject + '&body=' + body;
+    });
+  </script>
+
+</body>
+</html>
