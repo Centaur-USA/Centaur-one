@@ -544,5 +544,38 @@ html{scroll-behavior:smooth}#chiron{scroll-margin-top:12px}</style>
       window.location.href = 'mailto:brad@centaur.ag?subject=' + subject + '&body=' + body;
     });
   </script>
+
+<script>
+/* Keep #chiron aligned after the preceding brochure images finish loading. */
+(function () {
+  function jumpToChiron() {
+    if (window.location.hash.toLowerCase() !== '#chiron') return;
+    var section = document.getElementById('chiron');
+    if (!section) return;
+    var header = document.querySelector('header');
+    var headerHeight = header ? header.getBoundingClientRect().height : 0;
+    var top = window.scrollY + section.getBoundingClientRect().top - headerHeight - 8;
+    window.scrollTo({top: Math.max(0, top), behavior: 'instant'});
+  }
+  function initialize() {
+    if (window.location.hash.toLowerCase() !== '#chiron') return;
+    var section = document.getElementById('chiron');
+    if (!section) return;
+    var earlierImages = Array.from(document.querySelectorAll('img.brochure-page')).filter(function(img) {
+      return !!(img.compareDocumentPosition(section) & Node.DOCUMENT_POSITION_FOLLOWING);
+    });
+    earlierImages.forEach(function(img) {
+      img.loading = 'eager';
+      if (!img.complete) img.addEventListener('load', jumpToChiron, {once: true});
+      if (!img.complete) img.addEventListener('error', jumpToChiron, {once: true});
+    });
+    jumpToChiron();
+    window.addEventListener('load', jumpToChiron, {once: true});
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initialize, {once: true});
+  else initialize();
+  window.addEventListener('hashchange', jumpToChiron);
+})();
+</script>
 </body>
 </html>
