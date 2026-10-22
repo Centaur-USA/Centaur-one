@@ -373,7 +373,19 @@
     .referral-choices input[type="radio"] { width:auto; flex:none; margin:1px 0 0; padding:0; }
     @media(max-width:700px) { .quote-bottom-grid { grid-template-columns:1fr; gap:20px; } .referral-choices { grid-template-columns:1fr; } }
 
-html{scroll-behavior:smooth}#chiron{scroll-margin-top:12px}</style>
+html{scroll-behavior:smooth}#chiron{scroll-margin-top:12px}
+/* Group each bin site address with its own bins and capacities */
+.bin-sites{display:grid;gap:13px;margin-top:12px}
+.bin-site-block{border:1px solid #cbd5e1;border-radius:9px;padding:14px 16px;background:#fafcff}
+.bin-site-block h4{margin:0 0 12px;color:#061f36;font-size:16px}
+.mobile-quote-form input,.mobile-quote-form textarea{box-sizing:border-box}
+.mobile-quote-form textarea{width:100%;border:1px solid #cbd5e1;border-radius:8px;padding:12px;font:16px Arial,Helvetica,sans-serif;resize:vertical;background:#fff}
+@media(max-width:700px){.bin-site-block{padding:12px}.bin-site-block .form-grid{gap:10px}}
+/* Keep customer City, State and ZIP together on one line. */
+.city-state-zip-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1.2fr);gap:14px;min-width:0}
+.city-state-zip-row label{min-width:0}
+@media(max-width:700px){.city-state-zip-row{gap:8px;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) minmax(0,1.15fr)}}
+</style>
 </head>
 <body>
 <header>
@@ -493,48 +505,19 @@ html{scroll-behavior:smooth}#chiron{scroll-margin-top:12px}</style>
 <label>Phone<input name="Phone" type="tel"/></label>
 <label>Email<input name="Email" type="email"/></label>
 <label class="full">Address<input name="Address" type="text"/></label>
+<div class="city-state-zip-row full">
 <label>City<input name="City" type="text"/></label>
 <label>State<input name="State" type="text"/></label>
 <label>ZIP<input name="ZIP" type="text"/></label>
 </div>
-<h3>Site Information</h3>
-<div class="site-table">
-<div class="site-row header-row">
-<div>Site</div>
-<div>Location</div>
-<div># of Bins</div>
-<div># of Fans</div>
 </div>
-<div class="site-row">
-<div class="site-num">1</div>
-<label>Location<input name="Site 1 Location"/></label>
-<label># of Bins<input name="Site 1 Bins"/></label>
-<label># of Fans<input name="Site 1 Fans"/></label>
-</div>
-<div class="site-row">
-<div class="site-num">2</div>
-<label>Location<input name="Site 2 Location"/></label>
-<label># of Bins<input name="Site 2 Bins"/></label>
-<label># of Fans<input name="Site 2 Fans"/></label>
-</div>
-<div class="site-row">
-<div class="site-num">3</div>
-<label>Location<input name="Site 3 Location"/></label>
-<label># of Bins<input name="Site 3 Bins"/></label>
-<label># of Fans<input name="Site 3 Fans"/></label>
-</div>
-<div class="site-row">
-<div class="site-num">4</div>
-<label>Location<input name="Site 4 Location"/></label>
-<label># of Bins<input name="Site 4 Bins"/></label>
-<label># of Fans<input name="Site 4 Fans"/></label>
-</div>
-<div class="site-row">
-<div class="site-num">5</div>
-<label>Location<input name="Site 5 Location"/></label>
-<label># of Bins<input name="Site 5 Bins"/></label>
-<label># of Fans<input name="Site 5 Fans"/></label>
-</div>
+<h3>Bin Site Information</h3>
+<div class="bin-sites">
+<div class="bin-site-block"><h4>Bin Site 1</h4><div class="form-grid"><label class="full">Bin Site Location Address<input name="Site 1 Location" type="text"/></label><label class="full">Bin Size / Capacity (bu.) / Number of Fans on Bin<textarea name="Site 1 Bin Size Capacity and Fans" rows="2" placeholder="e.g. Bin 1: 36 ft diameter x 24 ft height / 20,000 bu. / 2 fans; Bin 2: 30,000 bu. / 1 fan"></textarea></label></div></div>
+<div class="bin-site-block"><h4>Bin Site 2</h4><div class="form-grid"><label class="full">Bin Site Location Address<input name="Site 2 Location" type="text"/></label><label class="full">Bin Size / Capacity (bu.) / Number of Fans on Bin<textarea name="Site 2 Bin Size Capacity and Fans" rows="2" placeholder="e.g. Bin 1: 36 ft diameter x 24 ft height / 20,000 bu. / 2 fans; Bin 2: 30,000 bu. / 1 fan"></textarea></label></div></div>
+<div class="bin-site-block"><h4>Bin Site 3</h4><div class="form-grid"><label class="full">Bin Site Location Address<input name="Site 3 Location" type="text"/></label><label class="full">Bin Size / Capacity (bu.) / Number of Fans on Bin<textarea name="Site 3 Bin Size Capacity and Fans" rows="2" placeholder="e.g. Bin 1: 36 ft diameter x 24 ft height / 20,000 bu. / 2 fans; Bin 2: 30,000 bu. / 1 fan"></textarea></label></div></div>
+<div class="bin-site-block"><h4>Bin Site 4</h4><div class="form-grid"><label class="full">Bin Site Location Address<input name="Site 4 Location" type="text"/></label><label class="full">Bin Size / Capacity (bu.) / Number of Fans on Bin<textarea name="Site 4 Bin Size Capacity and Fans" rows="2" placeholder="e.g. Bin 1: 36 ft diameter x 24 ft height / 20,000 bu. / 2 fans; Bin 2: 30,000 bu. / 1 fan"></textarea></label></div></div>
+<div class="bin-site-block"><h4>Bin Site 5</h4><div class="form-grid"><label class="full">Bin Site Location Address<input name="Site 5 Location" type="text"/></label><label class="full">Bin Size / Capacity (bu.) / Number of Fans on Bin<textarea name="Site 5 Bin Size Capacity and Fans" rows="2" placeholder="e.g. Bin 1: 36 ft diameter x 24 ft height / 20,000 bu. / 2 fans; Bin 2: 30,000 bu. / 1 fan"></textarea></label></div></div>
 </div>
 <div class="quote-bottom-grid">
 <div class="carrier-section">
